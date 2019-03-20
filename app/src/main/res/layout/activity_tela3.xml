@@ -7,11 +7,11 @@
     tools:context=".Tela3Activity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_toast"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#3D5AFE"
         android:onClick="exibirToast"
@@ -24,12 +24,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_count"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="#3D5AFE"
         android:onClick="aumentarCount"
         android:text="Count"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txt_numero"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -51,11 +51,11 @@
         android:gravity="center"
         android:text="1"
         android:textAlignment="center"
-        android:textColor="#304FFE"
+        android:textColor="@android:color/background_dark"
         android:textSize="300sp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/btn_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_toast" />
 
 </android.support.constraint.ConstraintLayout>
