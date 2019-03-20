@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,13 +12,19 @@ public class Tela3Activity extends AppCompatActivity {
 
     private TextView txtNumero;
     private int count;
+    private EditText editIncremento;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela3);
 
         txtNumero=findViewById(R.id.txt_numero);
-        int count = 0;
+        editIncremento=findViewById(R.id.edit_incremento);
+
+        count=0;
+        editIncremento.setText("1");
+
         atualizarTela();
     }
 
@@ -26,7 +33,9 @@ public class Tela3Activity extends AppCompatActivity {
     }
 
     public void aumentarCount(View view) {
-        count+=1;
+        int incremento= Integer.parseInt(editIncremento.getText().toString());
+
+        count+=incremento;
         atualizarTela();
         //txtNumero.setText("34");
         //Toast.makeText(this, "Testando o Count", Toast.LENGTH_SHORT).show();
@@ -37,7 +46,7 @@ public class Tela3Activity extends AppCompatActivity {
         if (count%2==0){
             txtNumero.setBackgroundColor(Color.rgb(255,0,0));
         }else{
-            txtNumero.setBackgroundColor(Color.rgb(255,255,0));
+            txtNumero.setBackgroundColor(Color.rgb(0,0,255));
         }
     }
 
