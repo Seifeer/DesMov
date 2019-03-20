@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,12 @@ public class Tela3Activity extends AppCompatActivity {
     }
     public void atualizarTela(){
         txtNumero.setText(""+count);
+
+        if (count%2==0){
+            txtNumero.setBackgroundColor(Color.rgb(255,0,0));
+        }else{
+            txtNumero.setBackgroundColor(Color.rgb(255,255,0));
+        }
     }
 
 }
